@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Fibo
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {   
+            //Fibonacci's Sequence
+
+            int n1 = 1;
+            int n2 = 0;
+            int sum = 0;
+
+            for (var i = 1; i <= 10; i++) {
+                sum = n1 + n2;
+                n2 = n1;
+                n1 = sum;
+                Console.WriteLine($"Value:{sum}");
+               
+            }
+            Console.ReadLine();
+        }
+    }
+}

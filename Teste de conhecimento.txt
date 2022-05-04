@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Teste_de_conhecimento
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = Porcentagem(100, 20);
+            Console.WriteLine(x);
+
+            Fibonacci();
+            Console.ReadLine();
+
+        }
+         static int Porcentagem(int capital, int porcento)
+        {
+            int porcentagem = (capital * porcento) / 100;
+            return porcentagem;
+        }
+        static void Fibonacci()
+        {
+            int x1=1;
+            int x2 = 0;
+            int soma = 0;
+
+            for(int i = 0; i < 10; i++)
+            {
+                soma = x1 + x2;
+                x2 = x1;
+                x1 = soma;
+                Console.WriteLine(soma);
+            }
+        }
+    }
+}

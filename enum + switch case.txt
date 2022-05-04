@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Enum___Switch___Menu
+{
+    internal class Program
+    {
+        enum opcao {criar = 1,deletar,editar,listar,atualizar}
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Escolha uma das opções abaixo: ");
+            Console.WriteLine("1-criar\n2-deletar\n3-editar\n4-listar\n5-atualizar");
+            int index = int.Parse(Console.ReadLine());
+            opcao OpcaoSelecionada = (opcao)index;
+            Console.WriteLine(OpcaoSelecionada); // não precisa, mas deixa aparecer no console;
+            
+            switch(OpcaoSelecionada)
+            {
+                case opcao.criar:
+                    Console.WriteLine("criado");
+                    break;
+                case opcao.deletar:
+                    Console.WriteLine("deletado");
+                    break;
+                case opcao.editar:
+                    Console.WriteLine("editado");
+                    break;
+                case opcao.listar:
+                    Console.WriteLine("Listado");
+                    break;
+                default:
+                    Console.WriteLine("Atualizado");
+                    break;
+            }
+            Console.ReadLine();
+        }
+    }
+}

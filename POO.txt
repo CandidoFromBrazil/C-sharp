@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POO_
+{   
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            pessoas p1=new pessoas();
+            p1.nome = "Matheus";
+            p1.idade = 21;
+            p1.MostrarDados();
+            p1.EMaiorDeIdade();
+            Console.ReadLine();
+        }
+
+        public class pessoas
+        {
+            public string nome;
+            public int idade;
+            public void MostrarDados()
+            {
+                Console.WriteLine($"nome: {this.nome}");
+                Console.WriteLine($"idade:{this.idade}");
+            }
+            public bool EMaiorDeIdade()
+            {
+                return (this.idade > 18); //se sim, retorna true;
+            }
+        }
+    }
+}

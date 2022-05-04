@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Funções
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            ExibirMSG();
+            Porcentagem(100, 10);
+            concatenaçãoC("Matheus Willians");
+
+
+            int soma1 = somar(1,2,3); // Instânciando a váriavel int soma1 com o valor de retorno da função somar;
+            int soma2 = somar(10,20,30);
+            int soma3 = somar(100,200,300);
+            Console.WriteLine(soma1);
+            Console.WriteLine(soma2);
+            Console.WriteLine(soma3);
+            Console.ReadLine();
+        }
+        static void ExibirMSG()
+        {
+            Console.WriteLine("Essa função está funcionando!!");
+        }
+        static void Porcentagem(int capital, int porcentagem)
+        {
+            int X = (capital * porcentagem / 100);
+            Console.WriteLine(X);
+        }
+        static void concatenaçãoC(string nome)
+        {
+            Console.WriteLine("O seu nome é: " + nome);
+        }
+
+        static int somar(int a, int b, int c)
+        {
+            int ResultadoFinal = a + b + c;
+            return ResultadoFinal;
+        }
+    
+    }
+}

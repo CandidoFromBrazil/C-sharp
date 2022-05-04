@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace @switch
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string cor = "Preto";
+            switch (cor)
+            {
+                case "vermelho":
+                    Console.WriteLine("Sua cor favorita é vermelho");
+                    break;
+                case "verde":
+                    Console.WriteLine("Sua cor favorita é verde");
+                    break;
+                case "azul":
+                    Console.WriteLine("Sua cor favorita é azul");
+                    break;
+                default:
+                    Console.WriteLine("Sua cor favorita não está contida nesse switch");
+                    break;
+            }
+            Console.ReadLine();
+        }
+    }
+}   

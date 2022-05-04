@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Enum
+{
+    internal class Program
+    {
+        //Enum = Gerador de tipos de dados (para conjuntos límitados de dados);
+        enum cor {azul,verde,amarelo,vermelho};
+        static void Main(string[] args)
+        {
+            //instânciando funções
+            hello();
+            int Calculo = Calculadora(10, 90, "*"); //Instânciando a função Calculadora;
+            Console.WriteLine(Calculo);
+
+            //Usando enum
+            cor CorFavorita = cor.vermelho;
+            cor MinhaCorFacorita = cor.amarelo;
+            Console.WriteLine(CorFavorita);
+            //Convertendo enum(cor) para um inteiro;
+            Console.WriteLine((int)MinhaCorFacorita);
+            //COnvertendo um inteiro para meu enum(cor);
+            Console.WriteLine((cor)2);
+
+            Console.ReadLine();
+        }
+        static void hello()
+        {
+            Console.WriteLine("Função Funcionando corretamente!");
+        }
+        static int Calculadora(int n1, int n2, string operation)
+        {
+            int result = 0;
+
+            if (operation == "*")
+            {
+                result = n1 * n2;
+            }
+            else if (operation == "/")
+            {
+                result = n1 / n2;
+            }
+            else if (operation == "+")
+            {
+                result = n1 + n2;
+            }
+            else
+            {
+                result = n1 - n2;
+            }
+            return result;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace @foreach
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] x = {"Matheus","Willians","Fernandes","Candido"};
+            foreach(string s in x)
+            {
+                Console.WriteLine(s);
+            }
+            int[] y = {0};
+            for (int c = 0; c < 51; c++)
+            {
+                y.Append(c);
+            }
+            Console.WriteLine(y);
+            f();
+            Console.ReadLine();
+        }
+        static void f()
+        {
+            Console.WriteLine("Inferno de array!");
+        }
+    }
+}
